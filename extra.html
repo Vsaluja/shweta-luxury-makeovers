@@ -1,0 +1,1126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<title>Shweta Luxury Looks</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Cinzel:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+:root{
+
+  --nude:#D9C2A7;
+  --latte:#B79D84;
+  --taupe:#8D7460;
+  --espresso:#2B211B;
+  --offwhite:#F7F3EF;
+
+  --bg-main:#F7F3EF;
+  --bg-soft:#EFE7DE;
+
+  --card-bg:rgba(255,255,255,0.58);
+
+  --text-dark:#2B211B;
+  --text-soft:#6F5A4A;
+
+  --border:rgba(141,116,96,0.12);
+
+  --shadow:
+    0 10px 35px rgba(43,33,27,0.06);
+
+  --gradient:
+    linear-gradient(
+      135deg,
+      #D9C2A7 0%,
+      #B79D84 100%
+    );
+}
+
+body{
+  background:var(--bg-main);
+  color:var(--text-dark);
+
+  font-family:'Cormorant Garamond', serif;
+
+  overflow-x:hidden;
+}
+
+/* NAVBAR */
+
+nav{
+
+  position:fixed;
+  top:0;
+  left:0;
+  right:0;
+
+  z-index:1000;
+
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+
+  padding:1.2rem 5vw;
+
+  background:rgba(247,243,239,0.75);
+
+  backdrop-filter:blur(16px);
+
+  border-bottom:1px solid rgba(141,116,96,0.08);
+}
+
+.nav-logo{
+  text-decoration:none;
+
+  color:var(--espresso);
+
+  font-family:'Cinzel', serif;
+
+  font-size:1rem;
+
+  letter-spacing:0.22em;
+}
+
+.nav-links{
+  list-style:none;
+
+  display:flex;
+  gap:2rem;
+}
+
+.nav-links a{
+
+  text-decoration:none;
+
+  color:var(--text-soft);
+
+  font-family:'Inter', sans-serif;
+
+  font-size:0.92rem;
+
+  transition:0.3s ease;
+}
+
+.nav-links a:hover{
+  color:var(--espresso);
+}
+
+.nav-cta{
+
+  text-decoration:none;
+
+  background:var(--gradient);
+
+  color:white;
+
+  padding:0.85rem 1.7rem;
+
+  border-radius:999px;
+
+  font-family:'Inter', sans-serif;
+
+  font-size:0.85rem;
+
+  box-shadow:var(--shadow);
+
+  transition:0.3s ease;
+}
+
+.nav-cta:hover{
+  transform:translateY(-2px);
+}
+
+/* HERO */
+
+#hero{
+
+  min-height:100vh;
+
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  color: #343837;
+  text-align:center;
+
+  position:relative;
+
+  overflow:hidden;
+
+  padding:8rem 2rem;
+
+  background:
+    radial-gradient(
+      circle at top,
+      rgba(217,194,167,0.25),
+      transparent 40%
+    ),
+    linear-gradient(
+      to bottom,
+      #F7F3EF,
+      #EFE7DE
+    );
+}
+
+.hero-bg{
+  position:absolute;
+  inset:0;
+
+  background:
+    radial-gradient(
+      circle at 50% 20%,
+      rgba(255,255,255,0.55),
+      transparent 35%
+    );
+}
+
+.hero-logo{
+
+  width:min(340px, 70vw);
+
+  position:relative;
+
+  z-index:2;
+
+  margin-bottom:2rem;
+
+  animation:fadeDown 1s ease;
+}
+
+.hero-divider{
+
+  display:flex;
+  align-items:center;
+  gap:1rem;
+
+  margin-bottom:2rem;
+
+  position:relative;
+
+  z-index:2;
+}
+
+.hero-divider::before,
+.hero-divider::after{
+
+  content:'';
+
+  width:80px;
+  height:1px;
+
+  background:linear-gradient(
+    to right,
+    transparent,
+    var(--latte)
+  );
+}
+
+.hero-divider::after{
+
+  background:linear-gradient(
+    to left,
+    transparent,
+    var(--latte)
+  );
+}
+
+.hero-divider span{
+
+  color:var(--latte);
+
+  font-size:1.2rem;
+}
+
+.hero-title{
+
+  font-family:'Cinzel', serif;
+
+  font-size:clamp(3rem, 8vw, 6rem);
+
+  color:var(--espresso);
+
+  line-height:1.1;
+
+  margin-bottom:1rem;
+
+  position:relative;
+
+  z-index:2;
+}
+
+.hero-subtitle{
+
+  color:var(--taupe);
+
+  font-size:1.25rem;
+
+  letter-spacing:0.08em;
+
+  margin-bottom:1.2rem;
+
+  font-style:italic;
+
+  position:relative;
+
+  z-index:2;
+}
+
+.hero-desc{
+
+  max-width:650px;
+
+  color:var(--text-soft);
+
+  line-height:1.9;
+
+  font-size:1.12rem;
+
+  position:relative;
+
+  z-index:2;
+}
+
+.hero-btns{
+
+  margin-top:2rem;
+
+  display:flex;
+  gap:1rem;
+
+  flex-wrap:wrap;
+
+  justify-content:center;
+
+  position:relative;
+
+  z-index:2;
+}
+
+/* BUTTONS */
+
+.btn-primary{
+
+  background:var(--gradient);
+
+  color:white;
+
+  text-decoration:none;
+
+  padding:1rem 2.3rem;
+
+  border-radius:999px;
+
+  font-family:'Inter', sans-serif;
+
+  letter-spacing:0.1em;
+
+  box-shadow:
+    0 10px 30px rgba(183,157,132,0.25);
+
+  transition:0.3s ease;
+}
+
+.btn-primary:hover{
+
+  transform:translateY(-3px);
+}
+
+.btn-secondary{
+
+  background:rgba(255,255,255,0.55);
+
+  border:1px solid rgba(141,116,96,0.2);
+
+  color:var(--espresso);
+
+  text-decoration:none;
+
+  padding:1rem 2.3rem;
+
+  border-radius:999px;
+
+  backdrop-filter:blur(10px);
+
+  transition:0.3s ease;
+}
+
+.btn-secondary:hover{
+
+  background:white;
+}
+
+/* SECTION */
+
+section{
+
+  padding:7rem 5vw;
+}
+
+.section-label{
+
+  text-align:center;
+
+  color:var(--latte);
+
+  letter-spacing:0.35em;
+
+  font-size:0.85rem;
+
+  text-transform:uppercase;
+
+  margin-bottom:1rem;
+
+  font-family:'Inter', sans-serif;
+}
+
+.section-title{
+
+  text-align:center;
+
+  font-family:'Cinzel', serif;
+
+  font-size:clamp(2rem, 4vw, 3rem);
+
+  margin-bottom:1rem;
+
+  color:var(--espresso);
+}
+
+.section-divider{
+
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  gap:1rem;
+
+  margin-bottom:4rem;
+}
+
+.section-divider::before,
+.section-divider::after{
+
+  content:'';
+
+  width:60px;
+  height:1px;
+
+  background:rgba(183,157,132,0.4);
+}
+
+.section-divider span{
+  color:var(--latte);
+}
+
+/* SERVICES */
+
+#services{
+
+  background:var(--bg-soft);
+}
+
+.services-grid{
+
+  display:grid;
+
+  grid-template-columns:
+    repeat(auto-fit, minmax(260px,1fr));
+
+  gap:2rem;
+
+  max-width:1200px;
+
+  margin:auto;
+}
+
+.service-card{
+
+  background:var(--card-bg);
+
+  padding:3rem 2rem;
+
+  border-radius:30px;
+
+  border:1px solid var(--border);
+
+  backdrop-filter:blur(16px);
+
+  box-shadow:var(--shadow);
+
+  transition:0.35s ease;
+
+  text-align:center;
+}
+
+.service-card:hover{
+
+  transform:translateY(-8px);
+
+  background:rgba(255,255,255,0.75);
+}
+
+.service-icon{
+
+  font-size:2.2rem;
+
+  margin-bottom:1rem;
+}
+
+.service-name{
+
+  font-family:'Cinzel', serif;
+
+  margin-bottom:1rem;
+
+  color:var(--espresso);
+}
+
+.service-desc{
+
+  color:var(--text-soft);
+
+  line-height:1.8;
+
+  font-size:1.05rem;
+}
+
+/* ABOUT */
+
+.about-wrap{
+
+  max-width:1200px;
+
+  margin:auto;
+
+  display:grid;
+
+  grid-template-columns:1fr 1fr;
+
+  gap:5rem;
+
+  align-items:center;
+}
+
+.about-image{
+
+  position:relative;
+}
+
+.about-image img{
+
+  width:100%;
+
+  border-radius:35px;
+
+  box-shadow:var(--shadow);
+}
+
+.about-content h2{
+
+  font-family:'Cinzel', serif;
+
+  font-size:3rem;
+
+  margin-bottom:1.5rem;
+
+  color:var(--espresso);
+}
+
+.about-content p{
+
+  color:var(--text-soft);
+
+  line-height:1.9;
+
+  margin-bottom:1.5rem;
+
+  font-size:1.1rem;
+}
+
+/* SPECIALTIES */
+
+#specialties{
+
+  background:var(--bg-soft);
+}
+
+.spec-grid{
+
+  display:grid;
+
+  grid-template-columns:
+    repeat(auto-fit,minmax(280px,1fr));
+
+  gap:2rem;
+
+  max-width:1100px;
+
+  margin:auto;
+}
+
+.spec-card{
+
+  background:var(--card-bg);
+
+  padding:2rem;
+
+  border-radius:28px;
+
+  border:1px solid var(--border);
+
+  box-shadow:var(--shadow);
+
+  transition:0.3s ease;
+}
+
+.spec-card:hover{
+
+  transform:translateY(-6px);
+}
+
+.spec-number{
+
+  font-family:'Cinzel', serif;
+
+  font-size:2rem;
+
+  color:var(--latte);
+
+  margin-bottom:1rem;
+}
+
+.spec-title{
+
+  font-family:'Cinzel', serif;
+
+  margin-bottom:0.8rem;
+
+  color:var(--espresso);
+}
+
+.spec-desc{
+
+  color:var(--text-soft);
+
+  line-height:1.8;
+}
+
+/* TESTIMONIALS */
+
+.testimonials-grid{
+
+  display:grid;
+
+  grid-template-columns:
+    repeat(auto-fit,minmax(300px,1fr));
+
+  gap:2rem;
+
+  max-width:1100px;
+
+  margin:auto;
+}
+
+.testimonial{
+
+  background:var(--card-bg);
+
+  padding:2.5rem;
+
+  border-radius:30px;
+
+  border:1px solid var(--border);
+
+  box-shadow:var(--shadow);
+}
+
+.testimonial-text{
+
+  line-height:1.9;
+
+  color:var(--text-soft);
+
+  margin-bottom:1.5rem;
+
+  font-size:1.05rem;
+}
+
+.testimonial-name{
+
+  color:var(--espresso);
+
+  font-family:'Cinzel', serif;
+}
+
+/* BOOKING */
+
+#booking{
+
+  background:var(--bg-soft);
+}
+
+.booking-wrap{
+
+  max-width:700px;
+
+  margin:auto;
+}
+
+.form-grid{
+
+  display:grid;
+
+  grid-template-columns:1fr 1fr;
+
+  gap:1rem;
+}
+
+input,
+textarea,
+select{
+
+  width:100%;
+
+  padding:1rem 1.2rem;
+
+  border-radius:18px;
+
+  border:1px solid var(--border);
+
+  background:rgba(255,255,255,0.65);
+
+  font-size:1rem;
+
+  color:var(--espresso);
+
+  outline:none;
+}
+
+textarea{
+
+  min-height:140px;
+
+  resize:vertical;
+}
+
+.full{
+  grid-column:1/-1;
+}
+
+/* FOOTER */
+
+footer{
+
+  padding:4rem 2rem;
+
+  text-align:center;
+
+  background:white;
+}
+
+.footer-logo{
+
+  font-family:'Cinzel', serif;
+
+  font-size:1.8rem;
+
+  margin-bottom:1rem;
+
+  color:var(--espresso);
+}
+
+.footer-text{
+
+  color:var(--text-soft);
+}
+
+/* ANIMATIONS */
+
+@keyframes fadeDown{
+
+  from{
+    opacity:0;
+    transform:translateY(-20px);
+  }
+
+  to{
+    opacity:1;
+    transform:translateY(0);
+  }
+}
+
+/* RESPONSIVE */
+
+@media(max-width:900px){
+
+  .about-wrap{
+
+    grid-template-columns:1fr;
+  }
+
+  .form-grid{
+
+    grid-template-columns:1fr;
+  }
+
+  .nav-links{
+    display:none;
+  }
+
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+
+<nav>
+
+  <a style="font-weight: bold;" href="#" class="nav-logo">
+    SHWETA SALUJA
+  </a>
+
+  <ul class="nav-links">
+
+    <li><a href="#services">Services</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#specialties">Expertise</a></li>
+    <li><a href="#testimonials">Reviews</a></li>
+
+  </ul>
+
+  <a href="#booking" class="nav-cta">
+    Book Now
+  </a>
+
+</nav>
+
+<!-- HERO -->
+
+<section id="hero">
+
+  <div class="hero-bg"></div>
+
+  <img
+    src="./ChatGPT_Image_May_25__2026__04_04_14_AM-removebg-preview.png"
+    class="hero-logo"
+  >
+
+  <div class="hero-divider">
+    <span>✦</span>
+  </div>
+
+  <h1 class="hero-title">
+    Modern Luxury Beauty
+  </h1>
+
+  <p class="hero-subtitle">
+    Elegant. Contemporary. Timeless.
+  </p>
+
+  <p class="hero-desc">
+
+    Bespoke luxury makeup artistry crafted
+    for brides, celebrations, editorials,
+    and unforgettable moments.
+
+  </p>
+
+  <div class="hero-btns">
+
+    <a href="#booking" class="btn-primary">
+      Book a Session
+    </a>
+
+    <a href="#services" class="btn-secondary">
+      Explore Services
+    </a>
+
+  </div>
+
+</section>
+
+<!-- SERVICES -->
+
+<section id="services">
+
+  <p class="section-label">
+    What I Offer
+  </p>
+
+  <h2 class="section-title">
+    Signature Services
+  </h2>
+
+  <div class="section-divider">
+    <span>✦</span>
+  </div>
+
+  <div class="services-grid">
+
+    <div class="service-card">
+      <div class="service-icon">💍</div>
+      <h3 class="service-name">Bridal Makeover</h3>
+      <p class="service-desc">
+        Luxury bridal artistry tailored to your personality and wedding vision.
+      </p>
+    </div>
+
+    <div class="service-card">
+      <div class="service-icon">✨</div>
+      <h3 class="service-name">Party Glam</h3>
+      <p class="service-desc">
+        Sophisticated glam for receptions, parties, and elegant evenings.
+      </p>
+    </div>
+
+    <div class="service-card">
+      <div class="service-icon">📸</div>
+      <h3 class="service-name">Photoshoot Makeup</h3>
+      <p class="service-desc">
+        Camera-ready luxury beauty crafted for flawless photography.
+      </p>
+    </div>
+
+  </div>
+
+</section>
+
+<!-- ABOUT -->
+
+<section id="about">
+
+  <div class="about-wrap">
+
+    <div class="about-image">
+
+      <img src="https://images.unsplash.com/photo-1487412947147-5cebf100ffc2?q=80&w=1200&auto=format&fit=crop">
+
+    </div>
+
+    <div class="about-content">
+
+      <p class="section-label" style="text-align:left;">
+        The Artist
+      </p>
+
+      <h2>
+        About Shweta
+      </h2>
+
+      <p>
+        Shweta Saluja is a luxury makeup artist known for creating timeless,
+        elegant beauty experiences with a modern editorial touch.
+      </p>
+
+      <p>
+        From intimate bridal transformations to glamorous event styling,
+        every look is crafted with precision, sophistication, and artistry.
+      </p>
+
+      <a href="#booking" class="btn-primary">
+        Work With Me
+      </a>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- SPECIALTIES -->
+
+<section id="specialties">
+
+  <p class="section-label">
+    Expertise
+  </p>
+
+  <h2 class="section-title">
+    Signature Specialties
+  </h2>
+
+  <div class="section-divider">
+    <span>✦</span>
+  </div>
+
+  <div class="spec-grid">
+
+    <div class="spec-card">
+      <div class="spec-number">01</div>
+      <h3 class="spec-title">HD & Airbrush Finish</h3>
+      <p class="spec-desc">
+        Long-lasting flawless makeup designed for luxury weddings and photography.
+      </p>
+    </div>
+
+    <div class="spec-card">
+      <div class="spec-number">02</div>
+      <h3 class="spec-title">Luxury Hair Styling</h3>
+      <p class="spec-desc">
+        Elegant hairstyles crafted to complement every bridal look beautifully.
+      </p>
+    </div>
+
+    <div class="spec-card">
+      <div class="spec-number">03</div>
+      <h3 class="spec-title">On-Location Service</h3>
+      <p class="spec-desc">
+        Premium beauty services delivered directly to your venue or home.
+      </p>
+    </div>
+
+  </div>
+
+</section>
+
+<!-- TESTIMONIALS -->
+
+<section id="testimonials">
+
+  <p class="section-label">
+    Client Love
+  </p>
+
+  <h2 class="section-title">
+    What Clients Say
+  </h2>
+
+  <div class="section-divider">
+    <span>✦</span>
+  </div>
+
+  <div class="testimonials-grid">
+
+    <div class="testimonial">
+
+      <p class="testimonial-text">
+        “Absolutely flawless experience. The makeup was elegant,
+        luxurious, and photographed beautifully.”
+      </p>
+
+      <h4 class="testimonial-name">
+        Priya Kapoor
+      </h4>
+
+    </div>
+
+    <div class="testimonial">
+
+      <p class="testimonial-text">
+        “Shweta perfectly balances modern glam with timeless bridal beauty.”
+      </p>
+
+      <h4 class="testimonial-name">
+        Ananya Mehta
+      </h4>
+
+    </div>
+
+    <div class="testimonial">
+
+      <p class="testimonial-text">
+        “Every detail felt premium and personalized. Truly exceptional artistry.”
+      </p>
+
+      <h4 class="testimonial-name">
+        Riya Sharma
+      </h4>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- BOOKING -->
+
+<section id="booking">
+
+  <div class="booking-wrap">
+
+    <p class="section-label">
+      Reserve Your Date
+    </p>
+
+    <h2 class="section-title">
+      Book a Session
+    </h2>
+
+    <div class="section-divider">
+      <span>✦</span>
+    </div>
+
+    <div class="form-grid">
+
+      <input type="text" placeholder="Your Name">
+
+      <input type="tel" placeholder="Phone Number">
+
+      <input type="email" placeholder="Email Address" class="full">
+
+      <select class="full">
+
+        <option>Select Occasion</option>
+
+        <option>Bridal Makeover</option>
+
+        <option>Engagement Look</option>
+
+        <option>Party Glam</option>
+
+      </select>
+
+      <textarea
+        class="full"
+        placeholder="Tell us about your vision..."
+      ></textarea>
+
+    </div>
+
+    <button
+      class="btn-primary"
+      style="
+      border:none;
+      margin-top:1.5rem;
+      width:100%;
+      cursor:pointer;
+      "
+    >
+      Send Enquiry
+    </button>
+
+  </div>
+
+</section>
+
+<!-- FOOTER -->
+
+<footer>
+
+  <h3 class="footer-logo">
+    SHWETA LUXURY LOOKS
+  </h3>
+
+  <p class="footer-text">
+    Crafted with elegance • Delhi, India
+  </p>
+
+</footer>
+
+</body>
+</html>
